@@ -1,0 +1,140 @@
+@import '@styles/base';
+
+.summaryContainer {
+  height: 100%;
+  .topContainer {
+    @include directionX;
+    width: 100%;
+    height: 85%;
+    align-items: center;
+    justify-content: center;
+    .container {
+      width: 75%;
+      .title {
+        color: $color-marine-blue;
+        font-weight: 600;
+        font-size: 30px;
+      }
+      .desc {
+        font-size: 15px;
+        font-weight: 200;
+        color: $color-cool-gray;
+      }
+      .cardContainer {
+        margin-top: 40px;
+        .card {
+          width: 90%;
+          height: 150px;
+          border-radius: 10px;
+          background-color: $color-verylight-blue;
+          .plan {
+            .planCont {
+              @include directionX;
+              justify-content: space-between;
+              align-items: center;
+              padding: 10px 10px 0px 10px;
+              .planTitleCont {
+                .planTitle {
+                  font-size: 15px;
+                  font-weight: 600;
+                  color: $color-marine-blue;
+                }
+                .planChange {
+                  font-size: 13px;
+                  color: $color-cool-gray;
+                }
+              }
+              .planPrice {
+                font-size: 15px;
+                font-weight: 600;
+                color: $color-marine-blue;
+              }
+            }
+
+            .lineCont {
+              @include directionX;
+              justify-content: center;
+              margin-top: 20px;
+              .line {
+                width: 90%;
+                height: 1px;
+                background-color: $color-light-gray;
+              }
+            }
+          }
+          .addOns {
+            .addOns1 {
+              @include directionX;
+              justify-content: space-between;
+              margin-top: 20px;
+              margin-right: 20px;
+              margin-left: 20px;
+              .titleAddOns {
+                font-size: 13px;
+                font-weight: 400;
+                color: $color-cool-gray;
+              }
+              .priceAddOns {
+                font-size: 13px;
+                font-weight: 400;
+                color: $color-marine-blue;
+              }
+            }
+            .addOns2 {
+              @include directionX;
+              justify-content: space-between;
+              margin-top: 20px;
+              margin-right: 20px;
+              margin-left: 20px;
+              .titleAddOns {
+                font-size: 13px;
+                font-weight: 400;
+                color: $color-cool-gray;
+              }
+              .priceAddOns {
+                font-size: 13px;
+                font-weight: 400;
+                color: $color-marine-blue;
+              }
+            }
+          }
+        }
+        .total {
+          @include directionX;
+          justify-content: space-between;
+          width: 85%;
+          padding-left: 15px;
+          margin-top: 30px;
+          .totalText {
+            font-size: 15px;
+            font-weight: 400;
+            color: $color-cool-gray;
+          }
+          .totalPrice {
+            font-size: 18px;
+            font-weight: 600;
+            color: $color-marine-blue;
+            filter: brightness(150%);
+          }
+        }
+      }
+    }
+  }
+  .bottomContainer {
+    @include directionX;
+    justify-content: end;
+    margin-right: 11%;
+    button {
+      background-color: $color-marine-blue;
+      color: $color-white;
+      padding: 12px 20px 12px 20px;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      filter: brightness(150%);
+    }
+  }
+}

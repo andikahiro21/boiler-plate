@@ -6,9 +6,12 @@ import languageReducer from '@containers/Language/reducer';
 
 import { mapWithPersistor } from './persistence';
 
+import homeReducer, { storedKey as storedHomeState } from '@pages/Home/reducer';
+
 const storedReducers = {
   app: { reducer: appReducer, whitelist: storedAppState },
   client: { reducer: clientReducer, whitelist: storedClientState },
+  home: { reducer: homeReducer, whitelist: storedHomeState },
 };
 
 const temporaryReducers = {

@@ -1,0 +1,45 @@
+@import '@styles/base';
+
+.sidebar {
+  width: 30%;
+  background-image: url('/bg-sidebar-desktop.svg');
+  margin: 10px 0px 10px 10px;
+  border-radius: 10px;
+  .containerTitle {
+    @include directionX;
+    gap: 10px;
+    align-items: center;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 30px;
+    .number {
+      @include directionX;
+      justify-content: center;
+      align-items: center;
+      color: $color-white;
+      border: 1px solid $color-white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+    .active {
+      border: 1px solid $color-light-blue;
+      background-color: $color-light-blue;
+      color: $color-marine-blue;
+    }
+    .title {
+      margin-left: 5px;
+      .headerTitle {
+        color: $color-cool-gray;
+        font-weight: 200;
+        font-size: 13px;
+      }
+      .bodyTitle {
+        color: $color-light-gray;
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

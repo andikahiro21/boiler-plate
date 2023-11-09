@@ -1,1 +1,21 @@
 @import '@styles/base';
+
+.home {
+  .cardContainer {
+    @include directionX;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    .card {
+      @include directionX;
+      width: 800px;
+      height: 550px;
+      border-radius: 10px;
+      background-color: $color-white;
+
+      .content {
+        width: 70%;
+      }
+    }
+  }
+}

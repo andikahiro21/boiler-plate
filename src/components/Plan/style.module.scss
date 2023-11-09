@@ -1,0 +1,157 @@
+@import '@styles/base';
+
+.planContainer {
+  height: 100%;
+  .topContainer {
+    @include directionX;
+    width: 100%;
+    height: 85%;
+    align-items: center;
+    justify-content: center;
+    .container {
+      width: 75%;
+      .title {
+        color: $color-marine-blue;
+        font-weight: 600;
+        font-size: 30px;
+      }
+      .desc {
+        font-size: 15px;
+        font-weight: 200;
+        margin-top: 10px;
+        color: $color-cool-gray;
+      }
+      .cardContainer {
+        @include directionX;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        gap: 20px;
+
+        .card {
+          @include directionY;
+          justify-content: space-between;
+          width: 120px;
+          height: 140px;
+          border-radius: 10px;
+          border: 1.8px solid $color-light-gray;
+          cursor: pointer;
+          img {
+            width: 40px;
+            margin-top: 10px;
+            margin-left: 10px;
+          }
+          .textCard {
+            margin-bottom: 20px;
+            margin-left: 10px;
+            .titleCard {
+              font-size: 15px;
+              font-weight: 600;
+              color: $color-marine-blue;
+            }
+            .priceCard {
+              font-size: 13px;
+              font-weight: 400;
+              color: $color-cool-gray;
+              filter: brightness(120%);
+              margin-top: 5px;
+            }
+          }
+        }
+        .card_active {
+          border: 1.8px solid $color-marine-blue;
+          background-color: $color-verylight-blue;
+        }
+        .card:hover {
+          border: 1.8px solid $color-marine-blue;
+        }
+      }
+      .switcherContainer {
+        background-color: $color-verylight-blue;
+        width: 100%;
+        height: 40px;
+        margin-top: 30px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .monthlyText {
+          font-size: 14px;
+          color: $color-cool-gray;
+          margin-right: 20px;
+        }
+
+        .monthlyText_active {
+          font-size: 14px;
+          color: $color-marine-blue;
+          margin-right: 20px;
+        }
+
+        .yearlyText {
+          font-size: 14px;
+          color: $color-cool-gray;
+          margin-left: 20px;
+        }
+
+        .yearlyText_active {
+          font-size: 14px;
+          color: $color-marine-blue;
+          margin-left: 20px;
+        }
+
+        .switch-toggle {
+          float: left;
+          background: $color-marine-blue;
+          border-radius: 10px;
+          font-size: 10px;
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+          }
+          input + label {
+            padding: 6px;
+            margin: 3px;
+            border-radius: 10px;
+            float: left;
+          }
+          input:checked + label {
+            background: $color-verylight-blue;
+            filter: brightness(90%);
+          }
+          input:checked + label:hover {
+            background: $color-verylight-blue;
+            filter: brightness(100%);
+          }
+        }
+      }
+    }
+  }
+  .bottomContainer {
+    @include directionX;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin-left: 70px;
+    button {
+      background-color: $color-marine-blue;
+      color: $color-white;
+      padding: 12px 20px 12px 20px;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      filter: brightness(150%);
+    }
+
+    .back {
+      color: $color-cool-gray;
+      cursor: pointer;
+    }
+    .back:hover {
+      color: $color-marine-blue;
+    }
+  }
+}

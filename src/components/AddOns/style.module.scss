@@ -1,0 +1,93 @@
+@import '@styles/base';
+
+.addonsContainer {
+  height: 100%;
+  .topContainer {
+    @include directionX;
+    width: 100%;
+    height: 85%;
+    align-items: center;
+    justify-content: center;
+    .container {
+      width: 75%;
+      .title {
+        color: $color-marine-blue;
+        font-weight: 600;
+        font-size: 30px;
+      }
+      .desc {
+        font-size: 15px;
+        font-weight: 200;
+        margin-top: 10px;
+        color: $color-cool-gray;
+      }
+      .cardContainer {
+        margin-top: 30px;
+        .card {
+          @include directionX;
+          margin-top: 10px;
+          width: 100%;
+          height: 80px;
+          border: 1.8px solid $color-light-gray;
+          border-radius: 10px;
+          cursor: pointer;
+          .leftContent {
+            @include directionX;
+            align-items: center;
+            gap: 10px;
+            width: 80%;
+            .titleCard {
+              font-size: 18px;
+              color: $color-marine-blue;
+            }
+            .descCard {
+              margin-top: 2px;
+              color: $color-cool-gray;
+              font-size: 14px;
+            }
+          }
+          .rightContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            .price {
+              font-size: 14px;
+              color: $color-pastel-blue;
+              filter: brightness(60%);
+            }
+          }
+        }
+        .card:hover {
+          border: 1.8px solid $color-marine-blue;
+        }
+      }
+    }
+  }
+  .bottomContainer {
+    @include directionX;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin-left: 70px;
+    button {
+      background-color: $color-marine-blue;
+      color: $color-white;
+      padding: 12px 20px 12px 20px;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      filter: brightness(150%);
+    }
+    .back {
+      color: $color-cool-gray;
+      cursor: pointer;
+    }
+    .back:hover {
+      color: $color-marine-blue;
+    }
+  }
+}

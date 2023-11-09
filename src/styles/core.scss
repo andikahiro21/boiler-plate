@@ -1,6 +1,6 @@
 @import './base.scss';
 :root {
-  font-family: Poppins, Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 
@@ -15,6 +15,11 @@
   @include apply-at-lg-size {
     font-size: 125%;
   }
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
